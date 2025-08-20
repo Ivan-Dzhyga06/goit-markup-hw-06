@@ -133,7 +133,7 @@ img{display:block;max-width:100%;height:auto}
 
 /* Footer */
 .footer{background:var(--title);padding:100px 0;color:#fff}
-.footer-inner{display:flex;gap:120px;align-items:baseline}
+.footer-inner{display:flex;align-items:baseline}
 .footer p{line-height:1.5;letter-spacing:0.02em;}
 .footer-brand{max-width:264px}
 .footer p{line-height:1.5;letter-spacing:0.02em;}
@@ -492,7 +492,19 @@ header {position:sticky;top:0;background-color:#fff;z-index:1000;box-shadow:0px 
 @media (max-width: 767.98px){
   .team-list,
   .footer-inner{ flex-wrap: wrap; }
-  .section{padding: 60px 0}
+  .section{padding: 90px 0}
+  .header-inner{padding: 16px 15px;}
+  .hero{background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/mobile-hero.jpg');}
+  .hero-title{font-family: Roboto;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 2%;
+    text-align: center;
+    max-width: 216px;
+    }
+    .modal{width: 288px;}
 
   /*        Benefits        */
   .benefits-list{
@@ -519,7 +531,6 @@ header {position:sticky;top:0;background-color:#fff;z-index:1000;box-shadow:0px 
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 2%;
-    text-align:center;
     margin-left: auto;
     margin-right: auto;
     max-width: 396px;
@@ -531,15 +542,15 @@ header {position:sticky;top:0;background-color:#fff;z-index:1000;box-shadow:0px 
     margin-left: auto;
     margin-right: auto;
     gap: 32px;}
-  .team-container {background-color: #F4F4FD;padding-bottom: 80px; }
-  .section-title{padding-top: 80px;}
+  .section-team{background-color: #F4F4FD;}
   .team-list{gap: 32px;}
   .team-container ul{padding: 0px;}
   /*       Portfolio      */
-  .portfolio-card{ width:264px; text-align:center;
+  .portfolio-card{ width:264px;
     margin-left: auto;
     margin-right: auto; }
   .portfolio-list {padding: 0px;}  
+  .portfolio img {max-width: 288px;}
 
   /*       footer        */
   .footer-inner{
@@ -566,17 +577,16 @@ header {position:sticky;top:0;background-color:#fff;z-index:1000;box-shadow:0px 
   .footer-socials .social-list{ justify-content:center; }
 
   .subscribe-form{
-    width:100%;
     display:flex;
-    flex-direction:column;
-    align-items:stretch;    
+    flex-direction:column;   
     gap:16px;
+    align-items: center;
   }
   .subscribe-label{ width:100%; }
-  .subscribe-input{ width:100%; }
+  .subscribe-input{ width:288px; }
 
   .subscribe-btn{
-    width:100%;               
+    width:165px;               
     justify-content:center;
   }
 }
@@ -590,14 +600,23 @@ header {position:sticky;top:0;background-color:#fff;z-index:1000;box-shadow:0px 
     display:flex;          
     flex-direction: column;
     gap: 4px;             
-    align-items: flex-end;  
+    align-items: flex-end;
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    leading-trim: NONE;
+    line-height: 14px;
+    letter-spacing: 4%;
   }
+  .hero{background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/tablet-bg.jpg');}
 
   /* Benefits */
+  .benefits{padding: 90px 0;}
   .benefits-list{
     display:flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 72px 24px;
     margin: 0; padding: 0;  
     list-style: none;
   }
@@ -609,10 +628,8 @@ header {position:sticky;top:0;background-color:#fff;z-index:1000;box-shadow:0px 
     font-size:36px;
     line-height:1.11;
     letter-spacing:0.02em;
-    text-align:center;
   }
   .benefit-text{
-    width: 288px;
     margin:0;
     font-family: Roboto;
     font-weight: 500;
@@ -620,16 +637,12 @@ header {position:sticky;top:0;background-color:#fff;z-index:1000;box-shadow:0px 
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 2%;
-    text-align:center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 396px;
   }
   /* Team */
   .team-list{
     display: flex;
     flex-wrap: wrap; 
-    gap: 24px;
+    gap: 64px 24px;
     justify-content:center;
     margin:0;
     padding:0;             
@@ -644,7 +657,9 @@ header {position:sticky;top:0;background-color:#fff;z-index:1000;box-shadow:0px 
     width:calc((100% - 24px)/2);   
   }
 
-    .footer-inner{ flex-wrap: wrap; gap:48px; }
+  .footer-inner{ flex-wrap: wrap; gap:48px; }
+  .footer-brand{margin-right: 0;}
+  .footer-inner{width: 584px;}
 }
 
 /* ==== Desktop ≥1158 ==== */
@@ -656,12 +671,15 @@ header {position:sticky;top:0;background-color:#fff;z-index:1000;box-shadow:0px 
 
   .portfolio-card{ width:calc((100% - 48px)/3); }
   .header .header-socials{ display: none; }
+  .section-team{background-color: #F4F4FD;}
+  .footer-socials{margin-right: 80px;}
 }
 
 
 
 
 @media (max-width: 767.98px){
+  
   .header.is-open{
     position: fixed; inset: 0; background: #fff; z-index: 1100;
   }
@@ -696,7 +714,8 @@ header {position:sticky;top:0;background-color:#fff;z-index:1000;box-shadow:0px 
     color: var(--title);
     text-decoration: none;
   }
-  .header.is-open .menu-link.current{ color: var(--pressed); }
+  .header.is-open .menu-link.current{ color: var(--pressed);}
+  .menu-link.current::after{display: none;}
 
   .header.is-open .contacts{ font-style: normal; }
   .header.is-open .contacts-list{
@@ -740,9 +759,9 @@ header {position:sticky;top:0;background-color:#fff;z-index:1000;box-shadow:0px 
   .header .header-socials{ display: none; }
   .header.is-open .header-socials{
     display: flex;
-    gap: 16px;
-    margin-top: auto;     
-    padding: 0;
+    gap: 16px;    
+    padding: 48px 0;
+    margin: 0;
     list-style: none;
     justify-content: flex-start;
   }
@@ -754,4 +773,16 @@ header {position:sticky;top:0;background-color:#fff;z-index:1000;box-shadow:0px 
   .header.is-open .header-socials .social-icon{
     width: 20px; height: 20px; fill: currentColor;
   }
+  .menu-toggle .icon{ display:block; width:24px; height:24px; fill:currentColor; stroke:currentColor; }
+
+  /* по умолчанию бургер видно, крестик скрыт */
+  .menu-toggle .open-menu{ display:block; }
+  .menu-toggle .icon--close{ display:none; height: 8px;width: 8px;}
+
+  /* при .header.is-open скрываем бургер, показываем крестик */
+  .header.is-open .menu-toggle .open-menu{ display:none !important; }
+  .header.is-open .menu-toggle .icon--close{ display:block !important; }
+
 }
+
+.social-link{color: white;}
